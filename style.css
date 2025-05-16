@@ -1,0 +1,100 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  background-color: rgb(219, 225, 225);
+  border-style: solid;
+  border-color: aqua;
+}
+
+.container {
+  margin: auto;
+  border-style: solid;
+  border-color: blue;
+  width: 50rem;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.form {
+  border-style: solid;
+  border-color: blue;
+  width: 50rem;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    'pic name close'
+    'pic phone close';
+}
+
+.cImage {
+}
+
+.cName {
+}
+
+.cPhone {
+}
+
+.add {
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+  grid-template-areas:
+    'pic name close'
+    'pic phone close';
+  align-items: center;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid aliceblue;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 20rem;
+  margin: 1rem;
+  transition: transform 0.2s;
+}
+
+.pic {
+  grid-area: pic;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.name {
+  grid-area: name;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.phone {
+  grid-area: phone;
+  font-size: 0.9rem;
+  text-align: left;
+  color: gray;
+}
+
+.close {
+  grid-area: close;
+  font-weight: bold;
+  font-size: 1rem;
+  color: red;
+  cursor: pointer;
+  justify-self: end;
+  text-decoration: none;
+  /* prevent default di js */
+}
