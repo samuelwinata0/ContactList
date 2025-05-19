@@ -15,7 +15,7 @@ body {
   margin: auto;
   border-style: solid;
   border-color: blue;
-  width: 50rem;
+  width: auto;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -27,26 +27,12 @@ body {
 .form {
   border-style: solid;
   border-color: blue;
-  width: 50rem;
+  width: auto;
   height: auto;
   margin: auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas:
-    'pic name close'
-    'pic phone close';
-}
-
-.cImage {
-}
-
-.cName {
-}
-
-.cPhone {
-}
-
-.add {
+  display:flex;
+  justify-content: space-evenly;
+  gap: 50px;
 }
 
 .card {
@@ -64,14 +50,9 @@ body {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 20rem;
+  height: auto;
   margin: 1rem;
   transition: transform 0.2s;
-}
-
-.pic {
-  grid-area: pic;
-  width: 3rem;
-  border-radius: 50%;
 }
 
 .name {
