@@ -1,14 +1,4 @@
-const closes = document.querySelectorAll('.close');
-
-closes.forEach(function (e) {
-  e.addEventListener('click', function (el) {
-    const target = el.target.parentElement;
-    target.style.display = 'none';
-    el.preventDefault();
-    console.log(target);
-  });
-});
-
+// Add New Number
 const inpName = document.querySelector('.inpName');
 const inpPhone = document.querySelector('.inpPhone');
 const container = document.querySelector('.container');
@@ -18,7 +8,6 @@ document.querySelector('.add').addEventListener('click', function () {
   const valuePhone = inpPhone.value;
 
   if (valueName && valuePhone) {
-    console.log('Menambahkan kartu: ', valueName, valuePhone);
     const div = document.createElement('div');
     div.classList.add('card');
 
@@ -45,5 +34,16 @@ document.querySelector('.add').addEventListener('click', function () {
     inpPhone.value = '';
   } else {
     alert('Fill Name and Phone Number');
+  }
+});
+
+// Close Button
+document.querySelector('.container').addEventListener('click', (e) => {
+  if (e.target.classList.contains('close')) {
+    e.preventDefault();
+    const card = e.target.closest('.card');
+    if (card) {
+      card.style.display = 'none'; // atau card.remove();
+    }
   }
 });
